@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- 文書の文字コードと、スマートフォンでの表示倍率を指定します。 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 検索エンジン向けのページ説明です。 -->
+    <meta name="description" content="大阪・本町のコワーキングスペース rest-work。1時間500円から、自由な働き方を。">
+    <title>rest-work | 大阪・本町のコワーキングスペース</title>
+
+    <!-- Google Fontsを読み込み、サイト全体の書体を統一します。 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- サイト共通のレイアウトとデザインを定義するCSSです。 -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+
+  <body>
+    <!-- ページの読み込み中に表示するローディング画面です。 -->
+    <div class="top-loading" data-top-loading role="status" aria-label="Rest-Workを読み込んでいます">
+      <div class="top-loading-inner">
+        <div class="top-loading-visual" aria-hidden="true">
+          <span class="top-loading-ripple top-loading-ripple-one"></span>
+          <span class="top-loading-ripple top-loading-ripple-two"></span>
+          <span class="top-loading-mark"><img src="img/logo.png" alt=""></span>
+        </div>
+        <p class="top-loading-copy">COMFORT SPACE</p>
+      </div>
+    </div>
+
+    <!-- 全ページ共通のヘッダーとナビゲーションです。 -->
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html" aria-label="rest-work トップ">rest-work<span>.</span></a>
+        <!-- JavaScriptで開閉するモバイル用メニューボタンです。 -->
+        <button class="menu-btn" aria-label="メニューを開く" aria-expanded="false" aria-controls="main-nav">☰</button>
+        <nav class="nav" id="main-nav" aria-label="メインナビゲーション">
+          <a href="index.html">ホーム</a>
+          <a href="space.html">スペース・設備</a>
+          <a href="price.html">料金</a>
+          <a href="guide.html">ご利用案内</a>
+          <a href="access.html">アクセス</a>
+          <a href="contact.html" class="btn header-cta">お問い合わせ →</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ファーストビュー：サービス概要、主要な導線、料金の目安を表示します。 -->
+      <section class="hero">
+        <div class="hero-image" role="img" aria-label="自然光が差し込む開放的なワークスペース"></div>
+        <div class="wrap hero-inner">
+          <div class="eyebrow">COWORKING SPACE IN OSAKA HONMACHI</div>
+          <h1>働く場所で、<br>リラックス時間。</h1>
+          <p>大阪・本町のコワーキングスペース。<br>集中したい日も、ゆっくり過ごしたい日も、<br>あなたの仕事にちょうどいい場所を。</p>
+          <div class="hero-actions">
+            <a class="btn yellow" href="price.html">料金プランを見る →</a>
+            <a class="btn btn-outline" href="guide.html">営業時間・ご利用案内を見る →</a>
+          </div>
+          <div class="price-badge">
+            <small>ドロップイン利用</small>
+            <strong>¥500<span> / 1時間</span></strong>
+            <em>※表示料金は架空の設定です</em>
+          </div>
+        </div>
+      </section>
+
+      <!-- コンセプト紹介：サービスの考え方とスペース詳細へのリンクです。 -->
+      <section class="section" id="concept">
+        <div class="wrap intro">
+          <div class="section-heading">
+            <div class="eyebrow">OUR CONCEPT</div>
+            <h2>仕事もリラックスタイムも、<br>自分らしく過ごす。</h2>
+            <p>いつものオフィスでも、自宅でもない。rest-workは、仕事に向き合う時間をもっと心地よくするための場所です。必要なときに、必要なだけ。気軽に立ち寄れるワークスペースを目指しました。</p>
+            <a class="btn" href="space.html">スペースについて詳しく →</a>
+          </div>
+          <div class="intro-photo">
+            <img loading="lazy" src="img/top.jpeg" alt="木の質感と自然光が心地よいオフィス空間">
+          </div>
+        </div>
+      </section>
+
+      <!-- 選ばれる理由：設備や立地などの特徴を3つのカードで整理します。 -->
+      <section class="section cream">
+        <div class="wrap">
+          <div class="section-heading">
+            <div class="eyebrow">WHY REST-WORK</div>
+            <h2>仕事がはかどる、3つの理由。</h2>
+            <p>カフェのような木のぬくもり。使いやすさを大切にした空間と設備をご用意しています。</p>
+          </div>
+          <div class="features">
+            <article class="feature"><div class="feature-icon">⌁</div><h3>集中できるワーク環境</h3><p>解放感のあるデスク配置と、グリーンの多い空間。リラックスして仕事に集中できます。</p></article>
+            <article class="feature"><div class="feature-icon">⌁</div><h3>仕事に必要な設備</h3><p>Wi-Fi、電源、ドリンクサービスなど、普段の仕事にうれしい設備が充実しています。</p></article>
+            <article class="feature"><div class="feature-icon">→</div><h3>大阪・本町の好立地</h3><p>ビジネス街の本町エリア。外出の合間や打ち合わせ前にも立ち寄りやすいロケーションです。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- スペース紹介：用途の異なる3種類のエリアを画像付きリンクで表示します。 -->
+      <section class="section">
+        <div class="wrap">
+          <div class="section-heading"><div class="eyebrow">OUR SPACE</div><h2>気分に合わせて、場所を選ぶ。</h2><p>ひとりで集中する時間も、誰かと話す時間も。働き方に寄り添うスペースをご用意しています。</p></div>
+          <div class="space-grid">
+            <a class="space-card" href="space.html"><img loading="lazy" src="img/open.jpeg" alt="開放的な共有ワークスペース"><h3>OPEN WORKSPACE →</h3></a>
+            <a class="space-card" href="space.html"><img loading="lazy" src="img/desk.jpeg" alt="自然光の入るデスクエリア"><h3>FOCUS DESK →</h3></a>
+            <a class="space-card" href="space.html"><img loading="lazy" src="img/meeting.jpeg" alt="落ち着いたミーティングスペース"><h3>MEETING AREA →</h3></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 料金プラン：時間・1日・月額の3プランを比較できるようにします。 -->
+      <section class="section cream" id="pricing">
+        <div class="wrap">
+          <div class="section-heading"><div class="eyebrow">SIMPLE PRICING</div><h2>必要なときに、必要なだけ。</h2><p>短時間の利用から日常的なワークスタイルまで、シンプルで分かりやすい料金体系です。</p></div>
+          <div class="pricing-grid">
+            <article class="plan"><span class="plan-label">HOURLY</span><h3>ドロップイン</h3><div class="amount">¥500 <small>/ 1時間</small></div><p>少しだけ作業したい日や、外出の合間に。予約不要の時間利用を想定しています。</p><a href="price.html" class="btn">詳細を見る →</a></article>
+            <article class="plan featured"><span class="plan-label">DAY PASS</span><h3>1日利用</h3><div class="amount">¥2,000 <small>/ 日</small></div><p>じっくり集中したい日に。時間を気にせず利用できる1日プランです。</p><a href="price.html" class="btn">詳細を見る →</a></article>
+            <article class="plan"><span class="plan-label">MONTHLY</span><h3>月額フリーアドレス</h3><div class="amount">¥15,000 <small>/ 月</small></div><p>定期的に利用する方に。自分のワークスタイルに合った拠点として使えます。</p><a href="price.html" class="btn">詳細を見る →</a></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- アクセス案内：所在地の概要とアクセス詳細ページへの導線です。 -->
+      <section class="section">
+        <div class="wrap access">
+          <div class="section-heading"><div class="eyebrow">ACCESS</div><h2>大阪・本町で、<br>あなたらしい働き方を。</h2><p>大阪市中央区・本町エリアを想定したコワーキングスペースです。アクセスしやすいビジネス街で、いつもの仕事に新しい選択肢を。</p><a class="btn" href="access.html">アクセス詳細を見る →</a></div>
+          <div class="access-panel"><span class="eyebrow">OSAKA / HONMACHI</span><strong>本町エリア</strong><p>大阪府大阪市中央区本町（架空の所在地）</p></div>
+        </div>
+      </section>
+
+      <!-- 問い合わせへの最終導線（Call To Action）です。 -->
+      <section class="cta"><div class="wrap"><div class="eyebrow">START YOUR WORKSTYLE</div><h2>新しい働き方を、ここから。</h2><p>スペースの見学やご利用について、お気軽にご相談ください。</p><a href="contact.html" class="btn yellow">お問い合わせ・見学相談 →</a></div></section>
+    </main>
+
+    <!-- 全ページ共通のフッターです。補助ナビゲーションと著作権表示を含みます。 -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div><a class="logo" href="index.html">rest-work<span>.</span></a><p>自分らしく働く、もうひとつの場所。<br>大阪・本町のコワーキングスペース</p></div>
+          <nav class="footer-nav" aria-label="フッターナビゲーション"><a href="space.html">スペース詳細</a><a href="price.html">料金</a><a href="guide.html">ご利用案内</a><a href="access.html">アクセス</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a><a href="company.html">運営会社</a></nav>
+        </div>
+        <small>© 2026 rest-work. Portfolio demonstration / Fictional business.</small>
+      </div>
+    </footer>
+
+    <!-- メニュー開閉やローディング画面などの動きを担当するJavaScriptです。 -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
