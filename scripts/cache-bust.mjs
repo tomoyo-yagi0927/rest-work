@@ -53,6 +53,11 @@ function rewriteCss(source, file) {
   return source.replace(/url\(\s*(["']?)([^"')]+)\1\s*\)/gi, (_, quote, value) => `url(${quote}${addVersion(value, directory)}${quote})`);
 }
 
+function rewriteJs(source) {
+  const hash = assetHashes.get('img/logo.png');
+  return hash ? source.replace(/(["'])img\/logo\.png\1/g, `$1img/logo.png?v=${hash}$1`) : source;
+}
+
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 
@@ -64,6 +69,8 @@ for (const file of sourceFiles) {
     await writeFile(destination, rewriteHtml(await readFile(file, 'utf8'), relative(root, file)), 'utf8');
   } else if (extension === '.css') {
     await writeFile(destination, rewriteCss(await readFile(file, 'utf8'), relative(root, file)), 'utf8');
+  } else if (extension === '.js') {
+    await writeFile(destination, rewriteJs(await readFile(file, 'utf8')), 'utf8');
   } else {
     await cp(file, destination);
   }
