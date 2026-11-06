@@ -1,3 +1,36 @@
+const loadingScreen = document.querySelector('[data-top-loading]');
+const loadingSessionKey = 'rest-work:top-loading-played';
+
+if (loadingScreen) {
+  let hasPlayed = false;
+  try {
+    hasPlayed = sessionStorage.getItem(loadingSessionKey) === '1';
+    sessionStorage.setItem(loadingSessionKey, '1');
+  } catch {
+    // If storage is unavailable, the animation still has a bounded lifetime.
+  }
+
+  const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const removeLoadingScreen = () => {
+    if (loadingScreen.dataset.dismissed) return;
+    loadingScreen.dataset.dismissed = 'true';
+    loadingScreen.classList.add('is-leaving');
+    window.setTimeout(() => loadingScreen.remove(), 450);
+  };
+
+  if (hasPlayed || reducedMotion) {
+    loadingScreen.remove();
+  } else {
+    window.setTimeout(removeLoadingScreen, 2000);
+  }
+} else {
+  try {
+    sessionStorage.setItem(loadingSessionKey, '1');
+  } catch {
+    // Ignore restricted storage environments.
+  }
+}
+
 const toggle = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
