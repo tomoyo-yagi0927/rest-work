@@ -54,8 +54,12 @@ function rewriteCss(source, file) {
 }
 
 function rewriteJs(source) {
-  const hash = assetHashes.get('img/logo.png');
-  return hash ? source.replace(/(["'])img\/logo\.png\1/g, `$1img/logo.png?v=${hash}$1`) : source;
+  let result = source;
+  for (const asset of ['img/logo.png', 'img/logo-w.png']) {
+    const hash = assetHashes.get(asset);
+    if (hash) result = result.replace(new RegExp(`(["'])${asset.replace('.', '\\.') }\\1`, 'g'), `$1${asset}?v=${hash}$1`);
+  }
+  return result;
 }
 
 await rm(output, { recursive: true, force: true });

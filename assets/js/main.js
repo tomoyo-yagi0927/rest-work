@@ -29,7 +29,8 @@ if (toggle && nav) {
 
 document.querySelectorAll('.logo').forEach((logoLink) => {
   const logoImage = document.createElement('img');
-  logoImage.src = new URL('img/logo.png', document.baseURI).href;
+  const logoPath = logoLink.closest('.footer') ? 'img/logo-w.png' : 'img/logo.png';
+  logoImage.src = new URL(logoPath, document.baseURI).href;
   logoImage.alt = 'Rest-Work';
   logoLink.replaceChildren(logoImage);
 });
