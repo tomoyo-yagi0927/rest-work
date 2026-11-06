@@ -13,6 +13,7 @@ async function listFiles(directory) {
   for (const entry of entries) {
     if (entry.name === '.git' || entry.name === '.github' || entry.name === '_site' || entry.name === 'node_modules' || entry.name === 'scripts') continue;
     const path = join(directory, entry.name);
+    if (directory === root && ['.gitignore', 'README.md', 'rest-work.code-workspace'].includes(entry.name)) continue;
     if (entry.isDirectory()) files.push(...await listFiles(path));
     else files.push(path);
   }
