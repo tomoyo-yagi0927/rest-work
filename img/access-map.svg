@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="550" height="380" viewBox="0 0 550 380" role="img" aria-labelledby="title desc">
+  <title id="title">rest-workの簡略アクセスマップ</title>
+  <desc id="desc">直角に交差する道路と、その道路沿いにあるrest-workの想定位置。実際の地理を示す地図ではありません。</desc>
+  <rect width="550" height="380" fill="#e7f1eb"/>
+  <!-- Muted city blocks; streets remain perpendicular. -->
+  <g fill="#dce8df">
+    <rect x="24" y="24" width="108" height="72" rx="5"/>
+    <rect x="184" y="24" width="126" height="72" rx="5"/>
+    <rect x="362" y="24" width="164" height="72" rx="5"/>
+    <rect x="24" y="148" width="108" height="90" rx="5"/>
+    <rect x="184" y="148" width="126" height="90" rx="5"/>
+    <rect x="362" y="148" width="164" height="90" rx="5"/>
+    <rect x="24" y="290" width="108" height="66" rx="5"/>
+    <rect x="184" y="290" width="126" height="66" rx="5"/>
+    <rect x="362" y="290" width="164" height="66" rx="5"/>
+  </g>
+  <!-- Draw all roads before the destination and label. -->
+  <g fill="none" stroke="#fff" stroke-width="26">
+    <path d="M158 0V380M336 0V380M0 122H550M0 264H550"/>
+  </g>
+  <g fill="none" stroke="#d5e3da" stroke-width="1">
+    <path d="M145 0V109H0M171 0V109H323V0M349 0V109H550"/>
+    <path d="M0 135H145V251H0M171 135H323V251H171ZM550 135H349V251H550"/>
+    <path d="M0 277H145V380M171 380V277H323V380M349 380V277H550"/>
+  </g>
+  <!-- Destination sits in the block immediately beside the north-south road. -->
+  <rect x="362" y="172" width="45" height="66" rx="4" fill="#c8ddd1"/>
+  <g transform="translate(384 207)">
+    <path d="M0 25C-5 18-17 6-17-5a17 17 0 0 1 34 0C17 6 5 18 0 25Z" fill="#018B6C"/>
+    <circle cy="-5" r="6" fill="#fff"/>
+  </g>
+  <rect x="361" y="155" width="153" height="37" rx="5" fill="#fff" stroke="#d5e3da"/>
+  <text x="437.5" y="179" text-anchor="middle" fill="#018B6C" font-family="Arial, sans-serif" font-size="19" font-weight="700">rest-work</text>
+  <text x="25" y="347" fill="#61716a" font-family="sans-serif" font-size="12">本町エリア・想定位置</text>
+  <g transform="translate(500 315)" fill="#61716a" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">
+    <path d="M0 5V-15M-4-10 0-15 4-10" fill="none" stroke="#61716a" stroke-width="1.5"/>
+    <text y="20">N</text>
+  </g>
+</svg>
